@@ -1,0 +1,48 @@
+#NOTA: El código de aqui es hecho por ChatGPT. Si bien, lo copie yo paso a paso, en si fué mas para aprender como funcionan las cosas.
+# Debo decir que aprendi bastante de ChatGPT, y seguramente ya tengo una idea de como usar Python (poquito).
+import math
+
+def formatear_numero(n):
+    # Solo aplicar is_integer() si el número es un flotante
+    return int(n) if isinstance(n, float) and n.is_integer() else n
+
+select = input("¿Qué quiere hacer: sumar, restar, dividir, multiplicar, elevar ó factorial?\n").strip().lower()
+
+while select not in ["sumar", "restar", "dividir", "multiplicar", "elevar", "factorial"]:
+    print ("Error. No se selecionó operación correcta. Vuelva a intentar.")
+    select = input("¿Qué quiere hacer: sumar, restar, dividir, multiplicar, elevar ó factorial?\n").strip().lower()
+
+if select == "factorial":
+    num = int(input("Ingrese un número:\n"))
+    if num < 0:
+        print("Error, los negativos no tienen factorial.")
+    else:
+        print(f"El factorial de {num} es: {math.factorial(num)}")
+
+else:
+    n01 = float(input("Ingrese un número:\n"))  # Convertimos a float siempre
+    n02 = float(input("Ingrese otro número:\n"))  # Convertimos a float siempre
+
+    # Formatear números antes de hacer los cálculos
+    n01 = formatear_numero(n01)
+    n02 = formatear_numero(n02)
+
+    suma = n01 + n02
+    resta = n01 - n02
+    div = n01 / n02 if n02 != 0 else "Error: división por 0"
+    mult = n01 * n02
+    elev = n01 ** n02
+
+    if select == "sumar":
+        print(f"La suma de {n01} y {n02} es: {formatear_numero(suma)}")
+    elif select == "restar":
+        print(f"La resta de {n01} y {n02} es: {formatear_numero(resta)}")
+    elif select == "dividir":
+        if n02 == 0:
+            print("No se puede dividir entre 0, intente de nuevo.")
+        else:
+            print(f"La división de {n01} y {n02} es: {formatear_numero(div)}")
+    elif select == "multiplicar":
+        print(f"La multiplicación de {n01} y {n02} es: {formatear_numero(mult)}")
+    elif select == "elevar":
+        print(f"La elevación de {n01} a la {n02} potencia es: {formatear_numero(elev)}")
