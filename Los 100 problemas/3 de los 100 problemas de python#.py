@@ -16,7 +16,7 @@ while select not in ["sumar", "restar", "dividir", "multiplicar", "elevar", "fac
      select = input ("¿Qué quiere hacer: sumar, restar, dividir, multiplicar, elevar ó factorial?\n").strip().lower()
 
           
-
+#3
 if select == "factorial":
      num = int(input("Ingrése un número:\n"))
      if num < 0:
