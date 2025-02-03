@@ -1,3 +1,6 @@
+#NOTA: El código de aqui es hecho por ChatGPT. Si bien, lo copie yo paso a paso, en si fué mas para aprender como funcionan las cosas.
+# Debo decir que aprendi bastante de ChatGPT, y seguramente ya tengo una idea de como usar Python (poquito).
+
 #Los 100 problemas de python#
 
 #1
