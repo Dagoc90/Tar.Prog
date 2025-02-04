@@ -17,7 +17,6 @@ select = input ("¿Qué quiere hacer: sumar, restar, dividir, multiplicar, eleva
 while select not in ["sumar", "restar", "dividir", "multiplicar", "elevar", "factorial"]:
      print ("Error, no seleccionó operación válida")
      select = input ("¿Qué quiere hacer: sumar, restar, dividir, multiplicar, elevar ó factorial?\n").strip().lower()
-
           
 #3
 if select == "factorial":
