@@ -12,8 +12,8 @@ tamanyo = max(len(par), len(impar))
 
 for item in range(tamanyo):
     try:
-        print("%4d \t %4d" % par[item], impar[item]) sep= '|'
+        print("%4d \t %4d" % par[item], impar[item])
 
 
 impresion = max(len(par), len (impar))
-print impresion
+print (impresion)
