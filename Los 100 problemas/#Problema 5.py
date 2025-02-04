@@ -1,14 +1,15 @@
-#Problema 6
+#Problema 5
 
+def es_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+       if n % i == 0:
+           return False
+    return True
 
-def calcu_inte_comp(capital, tasa, tiempo):
-    monto_final = capital * (1 + tasa) ** tiempo
-    return monto_final
-
-capital = float (input("Ingrese la capital inicial: "))
-tasa = float(input("Ingrese la tasa de interes en %: ")) / 100
-tiempo = float(input("Ingrese el tiempo en años"))
-monto = calcu_inte_comp(capital, tasa, tiempo)
-
-print(f"El monto final al pasar {tiempo} años será de {monto:.2f}")
-
+num =  int(input ("Introduzca el número a detectar: "))
+if es_primo(num):
+    print (f"El número {num} es primo.")
+else:
+    print (f"El número {num} no es primo.")
