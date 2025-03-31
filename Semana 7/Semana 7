@@ -1,0 +1,35 @@
+'''
+#Tipos básicos
+#Tipos compuestos
+#Tipos básicos aspirando a compuestos
+#Tipos compuestosque combinan otros tipos compuestos
+dict()
+'''
+
+mensaje = "Johanne Sacréblue"
+'''
+print (str(mensaje).capitalize())
+
+print (mensaje.count("a"))
+
+a += "† · †∂"
+print (mensaje.encode())
+
+indicesE = []
+
+for indice in range(len(mensaje)):
+    if mensaje[indice]== 'e':
+        indicesE.append(indice)
+        print (mensaje[indice], end= " ")
+print(indicesE)
+'''
+
+idx = 0
+id = -1
+lista = []
+
+while idx != len(mensaje):
+    if mensaje.index('e') != None:
+        id = mensaje.index('e')
+        mensaje = mensaje[id:]
+        lista.append(id + idx)
